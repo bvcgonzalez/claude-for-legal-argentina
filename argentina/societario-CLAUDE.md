@@ -63,6 +63,45 @@ El sistema identifica la jurisdicción de inscripción al inicio de cada consult
 
 ---
 
+## Alerta normativa - normas de vigencia variable
+
+### Resoluciones IGJ / DPPJ
+Los requisitos registrales, formularios y montos de capital mínimo son fijados
+por resolución de los organismos de control societario y se modifican con frecuencia.
+No asesorar sobre trámites registrales sin verificar el estado actual ante IGJ o DPPJ.
+
+Regla operativa: ante cualquier consulta sobre constitución, modificación
+o trámite registral societario, agregar:
+```
+[VERIFICAR REQUISITOS VIGENTES: resolución IGJ/DPPJ aplicable al trámite -
+ los requisitos de documentación, plazos y montos cambian por resolución
+ sin publicidad amplia]
+```
+
+### Normativa cambiaria y restricciones a la transferencia
+Las restricciones al giro de divisas al exterior afectan la ejecutabilidad de
+cláusulas de pago en moneda extranjera, repatriación de dividendos y
+financiamiento externo en operaciones M&A. El régimen cambiario se modifica
+frecuentemente por normativa del BCRA.
+
+Regla operativa: ante cualquier operación que involucre pagos en moneda extranjera
+o giro de fondos al exterior:
+```
+[VERIFICAR RÉGIMEN CAMBIARIO VIGENTE: normativa BCRA aplicable a la operación -
+ las restricciones cambiarias se modifican frecuentemente]
+```
+
+### Concentraciones económicas (CNDC)
+Los umbrales de notificación obligatoria a la Comisión Nacional de Defensa
+de la Competencia se actualizan periódicamente. Verificar antes de asesorar
+sobre la obligación de notificación en operaciones de M&A.
+```
+[VERIFICAR UMBRAL VIGENTE: monto mínimo de notificación CNDC - Ley 27.442
+ y resoluciones modificatorias]
+```
+
+---
+
 ## Normativa de referencia
 
 ### Derecho societario de fondo

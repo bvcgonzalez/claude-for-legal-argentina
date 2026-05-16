@@ -2,7 +2,26 @@
 
 > Archivo de configuración para el sistema claude-for-legal.
 > Complementa el perfil general (argentina/CLAUDE.md) con lógica específica de práctica societaria y operaciones de M&A.
-> Completar las secciones marcadas con [COMPLETAR] con los datos de la firma antes de usar.
+> **Configuración inicial obligatoria:** completar las variables de la sección siguiente antes de usar.
+
+---
+
+## Configuración inicial - completar antes de usar
+
+**JURISDICCION_INSCRIPCION:**
+Indicar la jurisdicción de inscripción habitual de las sociedades con las que trabajás. Determina qué organismo de contralor aplica y qué normativa de inscripción es relevante.
+
+Ejemplo: `JURISDICCION_INSCRIPCION: CABA (IGJ), con algunos casos PBA (DPPJ)`
+
+**TIPOS_SOCIETARIOS:**
+Indicar los tipos societarios con mayor frecuencia en tu cartera. El sistema prioriza la lógica de análisis correspondiente.
+
+Ejemplo: `TIPOS_SOCIETARIOS: SA cerrada, SRL, SAS`
+
+**OPERACIONES_HABITUALES:**
+Indicar el tipo de operaciones con mayor volumen de trabajo.
+
+Ejemplo: `OPERACIONES_HABITUALES: Constituciones, gobierno corporativo, M&A PyME`
 
 ---
 
@@ -12,9 +31,9 @@ Este perfil cubre práctica societaria argentina: constitución y organización 
 
 No aplica doctrinas de common law societario (Delaware corporate law, business judgment rule en sentido estricto anglosajón, piercing the corporate veil como doctrina autónoma sin base en el art. 54 LGS). Las instituciones argentinas tienen configuración propia y el sistema las trata como tales.
 
-**Jurisdicción de inscripción habitual:** [COMPLETAR: CABA (IGJ) / PBA (DPPJ) / otra]
-**Tipos societarios habituales:** [COMPLETAR]
-**Operaciones habituales:** [COMPLETAR: M&A / restructuraciones / constituciones / gobierno corporativo]
+**JURISDICCION_INSCRIPCION:** ver sección de configuración inicial
+**TIPOS_SOCIETARIOS:** ver sección de configuración inicial
+**OPERACIONES_HABITUALES:** ver sección de configuración inicial
 
 ---
 
@@ -63,7 +82,7 @@ El sistema identifica la jurisdicción de inscripción al inicio de cada consult
 - **CNV (cnv.gov.ar):** normas, resoluciones, registro de emisoras
 - **CNDC (cndc.gob.ar):** notificaciones de concentración económica
 - **Infoleg (infoleg.gob.ar):** texto oficial de normas
-- **CNAT / CNAC:** jurisprudencia comercial
+- **CNACOM (Cámara Nacional de Apelaciones en lo Comercial):** jurisprudencia comercial - verificar sala
 
 ---
 
@@ -328,11 +347,10 @@ Alertas específicas:
 
 ## Control de concentraciones (Defensa de la Competencia)
 
-**Ley 25.156 y modificatorias / Ley 27.442:**
+**Ley 27.442 (reemplazó a la Ley 25.156) [VERIFICAR VIGENCIA]:**
 - Notificación obligatoria ante la CNDC cuando la operación supera los umbrales de facturación combinada en Argentina
-- Los umbrales se actualizan periódicamente por resolución
-
-Regla operativa: en toda operación de M&A, verificar si supera los umbrales antes de estructurar el cierre. La notificación puede ser previa o posterior según el caso; verificar el régimen vigente.
+- Los umbrales se actualizan periódicamente por resolución de la Secretaría de Comercio
+- Régimen de notificación: puede ser previa o posterior al cierre según el monto; verificar el régimen vigente al momento de la operación
 
 ```
 [VERIFICAR UMBRAL CNDC VIGENTE: monto de la operación vs. umbral de notificación obligatoria]
@@ -351,3 +369,9 @@ Regla operativa: en toda operación de M&A, verificar si supera los umbrales ant
 - En pactos de accionistas: explicar siempre las consecuencias prácticas de cada mecanismo antes de redactar; la terminología del venture capital anglosajón es de uso habitual pero las consecuencias jurídicas en Argentina pueden diferir.
 - En operaciones con componente internacional: verificar si aplica la Ley 25.738 (participación extranjera) y si hay obligaciones de reporte ante el BCRA.
 - Todo escrito o informe societario cierra con "Estado del escrito" estándar más: jurisdicción de inscripción, tipo societario, aprobaciones regulatorias pendientes (CNDC / CNV / sectorial), contingencias identificadas sin cuantificar, próximo plazo si lo hay.
+
+---
+
+*Última actualización: mayo 2026*
+*Normativa base: LGS (Ley 19.550), Ley 27.349 (SAS), Ley 26.831 (Mercado de Capitales), Ley 27.442 (Defensa de la Competencia), Ley 11.867 (Fondo de Comercio)*
+*Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*

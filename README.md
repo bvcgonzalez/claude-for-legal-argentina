@@ -153,17 +153,55 @@ de cada perfil para que el sistema la procese con prioridad.
 
 Conectores de la comunidad que apuntan directamente a las fuentes oficiales argentinas:
 
-| Repositorio | Fuente | Función |
+### Conectores MCP disponibles
+
+| # | Repositorio / Endpoint | Fuente | Función | Requisito |
+|---|---|---|---|---|
+| 1 | [Ansvar-Systems/argentine-law-mcp](https://github.com/Ansvar-Systems/argentine-law-mcp) | InfoLEG / SAIJ | Texto literal de normas nacionales | Gratuito |
+| 2 | [Psflores/Legal-MCP-Server-](https://github.com/Psflores/Legal-MCP-Server-) | PJN / CABA | Jurisprudencia fueros nacionales | Gratuito |
+| 3 | [guidobonomini/argentina-law-mcp-server](https://github.com/guidobonomini/argentina-law-mcp-server) | Praxis local | Análisis semántico, glosario judicial | Gratuito |
+| 4 | [datos-justicia-argentina/Tesauro-Saij](https://github.com/datos-justicia-argentina/Tesauro-Saij-de-Derecho-Argentino) | SAIJ | Vocabulario controlado para búsqueda jurídica | Gratuito |
+| 5 | `https://api.fallobot.com/mcp` | CSJN · SAIJ · JUBA · SCBA | Búsqueda multifuente simultánea en lenguaje natural; enlaza al fallo original en la fuente oficial | Plan Pro (fallobot.com) |
+| 6 | SCBA / JUBA | Jurisprudencia PBA | Sin conector MCP de fuente abierta; cubierto por FalloBot (5). Ver instrucciones de acceso directo en `fuentes.md` | — |
+
+### Tabla de decisión rápida
+
+| Necesidad | Conector recomendado | Fallback manual |
 |---|---|---|
-| [Ansvar-Systems/argentine-law-mcp](https://github.com/Ansvar-Systems/argentine-law-mcp) | InfoLEG / SAIJ | Texto literal de normas nacionales |
-| [Psflores/Legal-MCP-Server-](https://github.com/Psflores/Legal-MCP-Server-) | PJN / CABA | Jurisprudencia fueros nacionales |
-| [guidobonomini/argentina-law-mcp-server](https://github.com/guidobonomini/argentina-law-mcp-server) | Praxis local | Análisis semántico, glosario judicial |
-| [datos-justicia-argentina/Tesauro-Saij](https://github.com/datos-justicia-argentina/Tesauro-Saij-de-Derecho-Argentino) | SAIJ | Vocabulario controlado para búsqueda jurídica |
+| Texto de norma nacional | 1 (Ansvar) | infoleg.gob.ar |
+| Texto de norma provincial PBA | Sin conector MCP | normas.gba.gob.ar |
+| Jurisprudencia CSJN | 5 (FalloBot, plan Pro) | sj.csjn.gov.ar |
+| Jurisprudencia CABA / fueros nacionales | 2 (Psflores) | pjn.gov.ar · jusbaires |
+| Jurisprudencia PBA (SCBA y cámaras) | 5 (FalloBot, plan Pro) | juba.scba.gov.ar |
+| Búsqueda multifuente simultánea | 5 (FalloBot, plan Pro) | Fuentes por separado |
+| Análisis semántico / terminología | 3 (guidobonomini) | Glosario del CLAUDE.md |
+| Mejora de búsquedas jurisprudenciales | 4 (Tesauro SAIJ) | saij.gob.ar |
+
+### Fuentes primarias sin conector MCP
+
+Acceso directo por el abogado para verificación manual. Son la fuente de verdad ante cualquier discrepancia con un conector.
+
+| Fuente | URL | Uso principal |
+|---|---|---|
+| InfoLEG | infoleg.gob.ar | Texto oficial de normas nacionales |
+| normas.gba.gob.ar | normas.gba.gob.ar | Leyes, decretos, códigos y resoluciones provinciales PBA (sin API pública; acceso por búsqueda o URL directa) |
+| SAIJ | saij.gob.ar | Jurisprudencia, doctrina, legislación provincial |
+| PJN | pjn.gov.ar | Acordadas y jurisprudencia federal |
+| CNACAF | cnacaf.gov.ar | Jurisprudencia contencioso administrativo federal y alzada tributaria |
+| SCBA | scba.gov.ar | Jurisprudencia PBA - fuente primaria bonaerense |
+| JUBA | juba.scba.gov.ar | Consulta de jurisprudencia PBA (SCBA + cámaras + primera instancia desde 2025) |
+| Poder Judicial CABA | buenosaires.gob.ar/jusbaires | Jurisprudencia fuero local CABA |
+| PTN | ptn.gov.ar | Dictámenes - responsabilidad del Estado y empleo público |
+| AAIP | argentina.gob.ar/aaip | Disposiciones de datos personales |
+| IGJ | igj.gob.ar | Resoluciones societarias CABA |
+| DPPJ | gba.gob.ar/dppj | Resoluciones societarias PBA |
+| TFN | tfnacional.gov.ar | Jurisprudencia tributaria |
+| BCRA | bcra.gov.ar | Normativa cambiaria y financiera |
 
 No son necesarios para empezar. Los perfiles funcionan solos como única configuración.
-Los conectores son la segunda capa: permiten que el sistema consulte InfoLEG automáticamente
-antes de analizar una norma. Ver `fuentes.md` para instrucciones de verificación de estado
-y fallback de cada conector.
+Los conectores son la segunda capa: permiten que el sistema consulte fuentes primarias
+automáticamente sin que el abogado tenga que pegar el texto en la sesión. Ver `fuentes.md`
+para instrucciones completas de verificación de estado, fallback y combinaciones recomendadas.
 
 ---
 

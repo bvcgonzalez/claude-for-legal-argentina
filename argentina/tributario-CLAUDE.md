@@ -61,12 +61,15 @@ Regla operativa: ante contradicción entre niveles, aplicar jerarquía normativa
 
 ### Organismo recaudador nacional
 
-**AFIP** (Administración Federal de Ingresos Públicos):
+> **[VERIFICAR VIGENCIA: denominación del organismo recaudador - Decreto 953/2024]**
+> Por Decreto 953/2024 (octubre 2024), la AFIP fue reorganizada y pasó a denominarse **ARCA** (Agencia de Recaudación y Control Aduanero). El cambio es nominal pero tiene impacto directo en escritos, resoluciones y procedimientos: un escrito que cite "AFIP" en lugar de "ARCA" en una presentación posterior a esa fecha puede generar observaciones formales. Este archivo mantiene la denominación "AFIP" en el cuerpo histórico para no alterar referencias normativas (p. ej. "RG AFIP"), pero en toda actuación procesal o presentación ante el organismo usar la denominación vigente **ARCA**.
+
+**ARCA** (ex AFIP — Agencia de Recaudación y Control Aduanero, Decreto 953/2024):
 - **DGI** (Dirección General Impositiva): tributos internos nacionales (IVA, ganancias, bienes personales, etc.)
 - **DGA** (Dirección General de Aduanas): tributos aduaneros, derechos de exportación e importación
 - **DGRSS** (Dirección General de los Recursos de la Seguridad Social): aportes y contribuciones patronales
 
-Regla operativa: identificar qué dependencia de AFIP tiene competencia antes de analizar el procedimiento. DGI y DGA tienen regímenes de fiscalización, recursos y sanciones parcialmente distintos.
+Regla operativa: identificar qué dependencia de ARCA tiene competencia antes de analizar el procedimiento. DGI y DGA tienen regímenes de fiscalización, recursos y sanciones parcialmente distintos.
 
 ---
 
@@ -89,6 +92,12 @@ decreto o resolución general AFIP.
 - **Régimen penal tributario (Ley 27.430, Título IX):** los umbrales de punibilidad
   se actualizan. Nunca citar el monto de punibilidad sin verificar el valor vigente.
   `[VERIFICAR MONTO ACTUALIZADO: umbral de punibilidad - Ley 27.430 arts. 1 y ss.]`
+  > **[ALERTA NORMATIVA: Ley 27.743 (julio 2024) — reforma del régimen penal tributario]**
+  > La Ley 27.743 (Ley de Medidas Fiscales Paliativas y Relevantes) introdujo cambios
+  > sustanciales en el régimen penal tributario, incluyendo la actualización de los
+  > umbrales de punibilidad y la eliminación de algunas figuras. La estructura del
+  > régimen no es la misma que la redacción original del Título IX de la Ley 27.430.
+  > Verificar el texto vigente de la Ley 27.743 antes de cualquier análisis penal tributario.
 - **TFN - monto mínimo de competencia:** se actualiza por resolución.
   `[VERIFICAR MONTO ACTUALIZADO: monto mínimo TFN - ley o decreto vigente]`
 - **Ingresos brutos - alícuotas:** varían por provincia y se actualizan en la ley
@@ -123,7 +132,7 @@ Regla operativa: en toda consulta tributaria, agregar al cierre:
 | Ganancias (personas humanas) | Ley 20.628 y DR Decreto 862/19 [VERIFICAR VIGENCIA: el DR fue objeto de modificaciones desde 2019] |
 | Ganancias (sociedades) | Ley 20.628, arts. 69 y ss. |
 | Bienes Personales | Ley 23.966 Título VI y modificatorias |
-| Ganancia Mínima Presunta | Ley 25.063 - **DEROGADA** por art. 76 Ley 27.260 con vigencia desde el ejercicio fiscal iniciado el 1° de enero de 2019. No aplica a períodos posteriores. Para períodos anteriores a 2019, puede haber ajustes o litigios pendientes bajo el régimen derogado. |
+| Ganancia Mínima Presunta | Ley 25.063 - **DEROGADA** por art. 76 Ley 27.260 con vigencia desde el ejercicio fiscal iniciado el 1° de enero de 2019. No aplica a períodos posteriores. Para períodos anteriores a 2019, puede haber ajustes o litigios pendientes bajo el régimen derogado. Nota jurisprudencial: la CSJN declaró la inconstitucionalidad del impuesto por confiscatorio en varios precedentes anteriores a la derogación (períodos 2002-2018). Esta doctrina puede ser relevante en litigios de esos períodos; verificar los fallos aplicables antes de analizar un caso de esos ejercicios. |
 | Seguridad social | Ley 24.241 (SIPA), Ley 24.714 (asignaciones), Decreto 814/01 y modificatorias [VERIFICAR VIGENCIA] |
 | Impuesto a los débitos y créditos bancarios | Ley 25.413 |
 | Derechos de exportación | CN art. 4 + Ley 27.541 y normas de emergencia |
@@ -134,12 +143,12 @@ Regla operativa: las alícuotas, mínimos no imponibles y deducciones cambian co
 
 - **Convenio Multilateral del 18/08/1977** [VERIFICAR VIGENCIA]: distribución de la base imponible de ingresos brutos entre provincias para contribuyentes que desarrollan actividad en más de una jurisdicción.
 - **Comisión Arbitral y Plenaria:** interpretación y resolución de conflictos interjurisdiccionales.
-- Regla operativa: en clientes con actividad multijurisdccional, el análisis de ingresos brutos siempre pasa por el Convenio Multilateral antes de calcular la base provincial.
+- Regla operativa: en clientes con actividad multijurisdiccional, el análisis de ingresos brutos siempre pasa por el Convenio Multilateral antes de calcular la base provincial.
 
 ### Tributación internacional
 
 - **Arts. 1, 2 y 124-130 Ley 20.628:** criterio de renta mundial para residentes argentinos
-- **Precios de transferencia (arts. 17 y 129 Ley 20.628):** operaciones entre partes vinculadas
+- **Precios de transferencia (arts. 17 y 129 Ley 20.628 — [VERIFICAR NUMERACIÓN: Texto Ordenado 2019, Decreto 824/2019]):** operaciones entre partes vinculadas
 - **Convenios para evitar la doble imposición (CDI):** verificar vigencia del CDI específico antes de aplicarlo; Argentina tiene CDI con número limitado de países
 - **CRS / Intercambio automático de información:** Ley 27.270 (CRS), acuerdos FATCA
 - **Resolución General AFIP de precios de transferencia vigente:** verificar número y texto antes de citar
@@ -200,8 +209,8 @@ Alertas específicas:
 5. Sentencia de la Sala
 
 **Salas del TFN:**
-- Salas A, B, C, D: materia impositiva (DGI)
-- Salas E, F, G, H: materia aduanera (DGA)
+> **[VERIFICAR VIGENCIA: composición y denominación de salas del TFN al momento de la interposición.]**
+> La distribución histórica era: Salas A, B, C, D para materia impositiva (DGI) y Salas E, F, G, H para materia aduanera (DGA). Sin embargo, la composición y denominación de las salas se ha modificado en los últimos años y pueden estar sujetas a reorganización. No asumir la distribución histórica sin verificar la acordada vigente del TFN al momento de la presentación.
 
 **Efecto de la sentencia del TFN:**
 - Apelable ante la Cámara Nacional de Apelaciones en lo Contencioso Administrativo Federal (CNACAF)
@@ -211,11 +220,38 @@ Alertas específicas:
 - Prescripción: el recurso ante el TFN suspende la prescripción de la acción de AFIP para ejecutar el crédito.
 - Medida de no innovar: el efecto suspensivo del recurso ante el TFN evita en principio la ejecución fiscal mientras tramita el recurso, pero verificar si hay garantías requeridas.
 
+### Vía de repetición
+
+**Repetición administrativa previa (art. 81 LPT):**
+Para ciertas categorías de impuestos, la acción de repetición judicial exige el reclamo administrativo previo ante ARCA como requisito de habilitación de la instancia judicial. Omitir este paso puede resultar en la inadmisibilidad de la demanda judicial.
+
+Regla operativa: antes de recomendar la vía de repetición judicial, verificar si el tributo y la situación encuadran en los supuestos del art. 81 LPT que requieren el agotamiento previo de la instancia administrativa. Si es necesario, presentar el reclamo administrativo de repetición antes de ir a sede judicial.
+
+**Repetición judicial:** si el contribuyente pagó y pretende recuperar lo pagado en exceso sin que exista determinación de oficio impugnable:
+- Demanda de repetición ante la CNACAF
+- Verificar si corresponde reclamo administrativo previo (art. 81 LPT)
+
+### Recurso ante el Director General (art. 74 DR LPT)
+
+El art. 74 del Reglamento de la LPT (Decreto 1397/79) prevé un recurso ante el Director General de la DGI contra actos que no son determinaciones de oficio ni sanciones —por ejemplo: denegatoria de exenciones, actos de trámite con efecto definitivo, actos que causan agravio irreparable sin ser determinaciones ni multas—.
+
+Regla operativa: ante un acto de ARCA que no encuadra en la vía del art. 76 LPT (recurso de reconsideración o apelación ante el TFN), evaluar si corresponde el recurso del art. 74 del DR antes de ir a la vía judicial. Su omisión puede obstruir la habilitación de la instancia contencioso administrativa federal.
+
+### Prejudicialidad penal-tributaria (post Ley 27.743)
+
+Ante la concurrencia de un procedimiento administrativo tributario y una causa penal tributaria, rige la regla de prejudicialidad. La Ley 27.743 (2024) introdujo modificaciones relevantes en este punto.
+
+Regla operativa:
+- Identificar si existe causa penal abierta por los mismos hechos que son objeto del procedimiento administrativo.
+- La existencia de causa penal puede suspender o condicionar el avance del procedimiento administrativo según el régimen vigente.
+- `[VERIFICAR VIGENCIA: regla de prejudicialidad penal-tributaria - Ley 27.743, normas vigentes]`
+- No aconsejar sobre el fondo del procedimiento administrativo sin alertar previamente sobre la interacción con la causa penal.
+
 ### Vía contencioso administrativa federal
 
-Para determinaciones que no alcancen el monto del TFN, o después de agotar la vía ante AFIP por reconsideración:
-- **Demanda de repetición judicial:** si el contribuyente pagó y pretende recuperar lo pagado en exceso
-- **Acción contencioso administrativa:** ante la CNACAF contra resoluciones de AFIP
+Para determinaciones que no alcancen el monto del TFN, o después de agotar la vía ante ARCA por reconsideración:
+- **Demanda de repetición judicial:** si el contribuyente pagó y pretende recuperar lo pagado en exceso (verificar reclamo administrativo previo — art. 81 LPT)
+- **Acción contencioso administrativa:** ante la CNACAF contra resoluciones de ARCA
 - **Recurso de apelación contra sentencias del TFN:** ante la CNACAF
 
 ---
@@ -238,10 +274,11 @@ Para determinaciones que no alcancen el monto del TFN, o después de agotar la v
 - Multa de 2 a 6 veces el impuesto evadido
 - Puede concurrir con la responsabilidad penal tributaria
 
-**Régimen penal tributario:**
-- **Ley 27.430 (Título IX - Régimen Penal Tributario)** [VERIFICAR VIGENCIA]: evasión simple (art. 1), evasión agravada (art. 2), aprovechamiento indebido de beneficios fiscales (art. 3), apropiación indebida de tributos (art. 4)
-- Montos de punibilidad: verificar actualización periódica; el Poder Ejecutivo está facultado a actualizarlos
-- Regla operativa: ante cualquier consulta con componente penal tributario, alertar al abogado sobre la concurrencia entre el procedimiento administrativo de AFIP y la causa penal. La prejudicialidad entre ambas vías tiene un régimen específico.
+- **Régimen penal tributario:**
+  - **Ley 27.430 (Título IX - Régimen Penal Tributario)** [VERIFICAR VIGENCIA]: evasión simple (art. 1), evasión agravada (art. 2), aprovechamiento indebido de beneficios fiscales (art. 3), apropiación indebida de tributos (art. 4)
+  - > **[ALERTA NORMATIVA: Ley 27.743 (julio 2024) reformó el régimen penal tributario con cambios sustanciales en umbrales de punibilidad y figuras típicas. Verificar el texto vigente de la Ley 27.743 antes de citar el régimen penal tributario.]**
+  - Montos de punibilidad: verificar actualización periódica; el Poder Ejecutivo está facultado a actualizarlos
+  - Regla operativa: ante cualquier consulta con componente penal tributario, alertar al abogado sobre la concurrencia entre el procedimiento administrativo de ARCA y la causa penal. Ver sección "Prejudicialidad penal-tributaria" a continuación.
 
 ### Prescripción
 
@@ -292,6 +329,7 @@ AFIP implementa planes de facilidades de pago de manera permanente (Planes AFIP)
 ### Precios de transferencia
 
 Para operaciones entre sujetos vinculados (art. 17 Ley 20.628):
+> **[VERIFICAR NUMERACIÓN: el articulado de la Ley 20.628 fue renumerado por la Ley 27.430 (reforma 2017). La referencia correcta surge del Texto Ordenado 2019 (Decreto 824/2019). Verificar la numeración vigente del TO antes de citar artículos de la ley original.]**
 - Principio arm's length: las operaciones deben valorarse como si las partes fueran independientes
 - Métodos: precio comparable no controlado, precio de reventa, costo más beneficios, margen neto transaccional, partición de utilidades
 - Documentación obligatoria: estudio de precios de transferencia anual para operaciones que superen los montos fijados por RG AFIP [VERIFICAR MONTO ACTUALIZADO: montos precios de transferencia - RG AFIP vigente]

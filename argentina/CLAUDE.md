@@ -507,6 +507,11 @@ Al inicio de cada consulta, el sistema identifica la rama del derecho y el tipo 
 | `penal-CLAUDE.md` | imputado, procesado, defensa penal, querella, medidas cautelares penales |
 | `familia-CLAUDE.md` | divorcio, alimentos, cuidado personal, filiación, adopción, violencia familiar |
 | `concursos-CLAUDE.md` | concurso preventivo, quiebra, verificación de créditos, APE, cramdown |
+| `plazos-SKILL.md` | cómputo de plazos procesales o administrativos, prescripción, caducidad, ferias judiciales, SECLO |
+| `diagnostico-SKILL.md` | diagnóstico previo de cualquier escrito aportado antes de modificarlo |
+
+Para conectores de fuentes primarias (InfoLEG, BORA, SAIJ, SCBA, CSJN, etc.):
+ver `argentina/fuentes.md`.
 
 ---
 
@@ -538,7 +543,10 @@ argentina/
   setup-interview.md                # Entrevista de configuración inicial
   setup-output-TEMPLATE.md          # Template de output de la entrevista
   diagnostico-SKILL.md              # Skill de diagnóstico previo (todos los fueros)
+  diagnostico-casos-prueba.md       # Casos de prueba para verificar el skill de diagnóstico
+  plazos-SKILL.md                   # Skill de cómputo de plazos procesales y administrativos
   red-flags-contratos.md            # Lista de alertas para revisión de contratos (activ. automática)
+  contratos-CLAUDE.md               # Perfil unificado para revisión y redacción de contratos
   administrativo-CLAUDE.md          # Perfil derecho administrativo
   civil-CLAUDE.md                   # Perfil derecho civil (CCCN)
   concursos-CLAUDE.md               # Perfil concursos y quiebras (LCQ)
@@ -551,6 +559,7 @@ argentina/
   ejemplos-laboral.md               # Casos de liquidación con checklist de rubros
   ejemplos-societario.md            # Due diligence y pactos de accionistas
   fuentes.md                        # Conectores MCP y fuentes primarias
+  macos-automation.md               # Módulo opcional - automatización de escritorio macOS (Claude Code)
 ```
 
 ---

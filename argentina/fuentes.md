@@ -45,6 +45,7 @@ conector no estaba disponible.
 | 8 - Psflores (PJN/CABA) | Jurisprudencia fueros nacionales | pjn.gov.ar acceso directo |
 | 9 - guidobonomini | Análisis semántico / glosario | Operar con glosario del CLAUDE.md; calidad terminológica puede bajar |
 | 10 - Tesauro SAIJ | Vocabulario jurídico controlado | Usar terminología estándar CCCN y LCT directamente |
+| 11 - BORA Oficial | Boletín Oficial de la República Argentina | boletinoficial.gob.ar acceso directo |
 
 Cuando se usa el fallback manual (pegar texto en sesión), indicar siempre
 al inicio del texto pegado: fuente, fecha de consulta y URL de origen.
@@ -317,6 +318,54 @@ Limitaciones:
 
 ---
 
+### 11. BORA Oficial (bora-mcp)
+
+**URL directa (Claude.ai):** https://bora-mcp.vercel.app/api/mcp/sse
+**Fuente:** boletinoficial.gob.ar (Boletín Oficial de la República Argentina)
+**Función:** Consulta directa al BORA. Devuelve la portada del día, sumario completo
+por fecha, texto verbatim de avisos por ID, nuevas sociedades (Segunda Sección)
+y licitaciones públicas (Tercera Sección).
+**Instalación:** conexión directa vía URL en Claude.ai (Settings → Integrations →
+Add MCP Server → pegar la URL). Sin Node.js ni uvx.
+**Estado al mayo 2026:** verificado activo. Probado con todas las herramientas disponibles.
+
+Herramientas disponibles:
+
+| Herramienta | Función |
+|---|---|
+| `obtener_portada` | Portada del día con links a PDFs firmados de las 4 secciones |
+| `obtener_sumario_del_dia` | Sumario completo por fecha, agrupado por rubros |
+| `obtener_detalle_aviso` | Texto verbatim de un aviso por sección, ID y fecha |
+| `buscar_nuevas_sociedades` | Constituciones de S.A., S.R.L. y S.A.S. en la Segunda Sección |
+| `buscar_licitaciones_publicas` | Licitaciones y contrataciones en la Tercera Sección con criterio y rango de fechas |
+| `alcance_fuente` | Capacidades, fuentes y limitaciones del conector |
+| `buscar_avisos` | Búsqueda de avisos por texto libre |
+| `obtener_enlace_pdf` | Link directo al PDF firmado digitalmente de un aviso |
+| `obtener_sumario_seccion` | Sumario de una sección específica para una fecha |
+
+Casos de uso:
+- Verificar el texto exacto de un decreto, resolución o disposición publicada hoy
+- Consultar la portada del día para detectar normas relevantes por área
+- Buscar la constitución de una sociedad y obtener el texto del acto constitutivo
+- Rastrear licitaciones públicas por organismo o materia
+- Confirmar si una norma fue publicada en el BORA en una fecha determinada
+
+Limitaciones:
+- Cubre exclusivamente el BORA nacional; no incluye boletines provinciales
+- `buscar_nuevas_sociedades` indexa avisos de la Segunda Sección sin discriminar
+  siempre por tipo de acto: puede retornar convocatorias a asamblea junto con constituciones.
+  Cruzar el resultado con `obtener_detalle_aviso` para confirmar el tipo de acto
+- No reemplaza al conector 1 (Ansvar) para verificar texto consolidado de una norma:
+  el BORA devuelve la publicación original, no el texto con todas sus modificaciones
+
+**Nota operativa:** para verificar vigencia, usar conector 1 (Ansvar) o conector 2
+(voftec para normas PBA). El BORA confirma la publicación original y las normas
+modificatorias individualmente, pero no consolida el texto.
+
+**Fallback:** boletinoficial.gob.ar acceso directo sin conector.
+
+---
+
 ## Tabla de decisión - qué conector usar
 
 | Necesidad | Conector recomendado | Alternativa |
@@ -331,12 +380,15 @@ Limitaciones:
 | Buscar jurisprudencia PJN alternativa | 8 (Psflores) | pjn.gov.ar directo |
 | Análisis semántico / terminología | 9 (guidobonomini) | Glosario CLAUDE.md |
 | Mejorar búsquedas jurisprudenciales | 10 (Tesauro SAIJ) | SAIJ directo |
+| Texto de normas publicadas en BORA / sociedades / licitaciones | 11 (BORA Oficial) | boletinoficial.gob.ar directo |
 
 **Combinaciones recomendadas:**
 
 - **1 + 2:** práctica bonaerense completa. Normas nacionales (InfoLEG) + normas provinciales PBA.
 - **1 + 3 + 4:** flujo de investigación completo para escritos en fuero provincial PBA. Norma nacional verificada + jurisprudencia PBA + doctrina SAIJ.
 - **1 + 5 + 6:** recursos extraordinarios y escritos ante fueros nacionales. Norma verificada + CSJN + fueros nacionales CABA.
+- **1 + 11:** verificación normativa completa. El 1 da el texto consolidado; el 11 confirma la publicación original y rastreala cadena de modificaciones por fecha.
+- **11 + societario-CLAUDE.md:** due diligence societario. El 11 busca el acto constitutivo y modificaciones en el BORA; el perfil aporta la lógica de análisis LGS.
 - **10 + 4:** el Tesauro normaliza la terminología antes de ejecutar la búsqueda en SAIJ.
 - **1 + 9:** análisis de contratos. El 9 detecta terminología; el 1 verifica las normas citadas.
 
@@ -426,6 +478,29 @@ Ver instrucciones detalladas en el README del repositorio de cada conector.
 **Compatibilidad:** todos los conectores listados son compatibles con cualquier
 cliente MCP estándar (Claude, OpenCode u otros) que soporte el protocolo MCP
 sobre HTTP/SSE o stdio.
+
+---
+
+## Módulo de automatización de escritorio (macOS)
+
+`macos-use` no es un conector a fuentes jurídicas sino una capa de automatización
+de apps macOS. Se documenta aquí porque se instala como servidor MCP junto con
+los conectores de fuentes.
+
+**Solo aplica a:** Claude Code en Mac con macOS 13+. No aplica a Claude.ai web
+ni a entornos Windows/Linux.
+
+**Instalación en Claude Code:**
+```bash
+claude mcp add macos-use -- npx -y mcp-server-macos-use
+```
+
+Requiere permiso de Accesibilidad en el terminal. Ver instrucciones completas
+en `argentina/macos-automation.md`.
+
+**Casos de uso jurídicos:** portales judiciales sin API (PJN, MEJ, SCBA),
+carga de escritos en sistemas de gestión, formularios de organismos administrativos
+(IGJ, AFIP desktop, ANSES), adjuntar y enviar documentos generados por el sistema.
 
 ---
 

@@ -241,6 +241,7 @@ Los plugins disponibles corresponden a las áreas de práctica cubiertas por est
 | `tributario-CLAUDE.md` | Derecho tributario | - | Alícuotas, MNI, umbrales de punibilidad |
 | `concursos-CLAUDE.md` | Concursos y quiebras (LCQ) | - | Tasas post-concursales, reformas LCQ |
 | `contratos-CLAUDE.md` | Revisión y redacción de contratos | `red-flags-contratos.md` | Régimen cambiario, locaciones, intertemporalidad |
+| `especialidades/medicina-legal-CLAUDE.md` | Pericia médica forense (penal / civil / seguridad social) | - | CPPF implementación por distrito, baremos por tribunal |
 
 ---
 
@@ -260,6 +261,7 @@ de cada perfil para que el sistema la procese con prioridad.
 | `familia-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Cuotas alimentarias, locaciones con destino habitacional |
 | `penal-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Umbrales de punibilidad, códigos procesales en transición |
 | `societario-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Resoluciones IGJ/DPPJ, capital mínimo, sindicatura |
+| `especialidades/medicina-legal-CLAUDE.md` | `## Alerta normativa` | Estado de implementación CPPF por distrito, baremos por tribunal requirente |
 
 
 

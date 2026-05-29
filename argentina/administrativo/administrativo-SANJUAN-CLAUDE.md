@@ -5,7 +5,7 @@
 > Cargar junto con administrativo-CLAUDE.md en el Project. Este archivo no reemplaza al nacional - lo extiende.
 > **Configuración inicial obligatoria:** completar las variables del Bloque 0 antes de usar.
 >
-> **Estado del perfil:** operativo - todos los campos estructurales completados y verificados contra la Ley N° 1995-A, la Ley N° 2415-O y el Digesto Jurídico de San Juan. Quedan [PENDIENTE] solo los campos de configuración inicial (AREAS_PRACTICA y ORGANISMO_CONTRALOR_HABITUAL), los estatutos sectoriales de empleo público, el reglamento de la Ley N° 1995-A y los campos de Fiscalía de Estado (domicilio procesal, URL) que dependen del caso concreto.
+> **Estado del perfil:** operativo - todos los campos estructurales completados y verificados. Quedan [PENDIENTE] solo los campos de configuración inicial (AREAS_PRACTICA y ORGANISMO_CONTRALOR_HABITUAL) que el usuario completa con los datos del caso, más campos no bloqueantes: alzada en entes autárquicos (depende del estatuto de cada ente), plazo de amparo (articulado específico no aportado), contracautela y vigencia cautelar (se resuelven por remisión al proceso abreviado vía art. 734), requisitos de admisibilidad del recurso extraordinario ante la Corte de Justicia (articulado procesal Ley N° 2352-O no aportado), control TC sobre municipios, negociación colectiva.
 
 ---
 
@@ -23,6 +23,9 @@
 |---------|-------|---------------------|
 | 1.0 | Mayo 2025 | Versión inicial - fuente: Ley N° 2415-O, Ley N° 1995-A, Digesto Jurídico de San Juan |
 | 1.1 | Mayo 2025 | Completado: articulado Ley N° 1995-A (recursos, elementos, nulidades, silencio + pronto despacho); plazo de caducidad con artículo exacto (30 días corridos acto expreso / 3 meses silencio - arts. 727 y ss. Ley N° 2415-O); Fiscalía de Estado (Ley N° 319-E, art. 263 CP); empleo público (Ley N° 560-E); contrataciones (Ley N° 2000-A + Decreto 1148-MHF-2020); responsabilidad del Estado (sin ley propia - aplicación pretoriana arts. 8 y 43 CP San Juan) |
+| 1.2 | Mayo 2025 | Completado: estatutos sectoriales (Ley N° 64-H docente; Ley N° 2529-A salud; Ley N° 487-R policial; Ley N° 1222-R penitenciario); organismo rector contrataciones (DGCGC); plataforma compraspublicas.sanjuan.gob.ar; obra pública (Ley N° 118-A + Dec. 1228-P-1979); Tribunal de Cuentas (art. 253 CP + Ley N° 260-E); Defensor del Pueblo (art. 134 CP + Ley N° 100-E); domicilio Fiscalía de Estado; reglamento LPA (no existe decreto reglamentario separado); eliminados marcadores duplicados |
+| 1.3 | Mayo 2025 | Completado con texto íntegro del Título V Ley N° 2415-O (arts. 727-736): artículos exactos de caducidad (art. 729 inc. a y b), habilitación de instancia de oficio (art. 730), expediente administrativo (art. 731), traslado a Fiscalía + plazo 15 días (art. 732), Fiscalía parte necesaria + nulidad insanable (art. 733), subsidiariedad proceso abreviado (art. 734), cautelares simultáneas (art. 735), sentencia declarativa + consolidación presupuestaria (art. 736); pretensiones admisibles (sistema abierto art. 727); competencia material exacta |
+| 1.4 | Mayo 2025 | Incorporada Ley N° 2352-O: corrección denominación "Corte de Justicia" (no STJ); Sala Segunda competente en materia CA; organización territorial (Primera y Segunda Circunscripción - Jáchal/Iglesia sin juzgado CA propio); competencia CA incluye violencia laboral sector público; feria judicial enero + receso invierno 15 días; corrección en todos los bloques de referencia al máximo tribunal |
 
 ---
 
@@ -30,7 +33,7 @@
 
 **PROVINCIA:** Provincia de San Juan
 
-**FUERO_HABITUAL:** Juzgado Contencioso Administrativo de la Primera Circunscripción Judicial - Ciudad de San Juan (primera instancia, órgano unipersonal especializado). Alzada: Cámara de Apelaciones en lo Civil, Comercial y Minería de San Juan (salas distribuidas, sin cámara exclusiva CA). No existe instancia originaria ante tribunal superior; el STJ de San Juan interviene solo por vía extraordinaria.
+**FUERO_HABITUAL:** Juzgado Contencioso Administrativo - Primera Circunscripción Judicial, Ciudad de San Juan (primera instancia, órgano unipersonal especializado). Alzada: Cámara de Apelaciones en lo Civil, Comercial y Minería de San Juan (salas distribuidas, sin cámara exclusiva CA). Recurso extraordinario: Corte de Justicia de San Juan, Sala Segunda (materia CA, penal, laboral y previsional). La Corte no tiene competencia originaria en materia CA ordinaria.
 
 **AREAS_PRACTICA:** [COMPLETAR: áreas de mayor volumen dentro de administrativo San Juan. Ej: "Empleo público provincial, responsabilidad del Estado, contratación pública, impugnación de actos del Poder Ejecutivo Provincial".]
 
@@ -142,7 +145,7 @@ Elementos:
   - Vías de hecho administrativas (acciones materiales lesivas del Estado sin sustento en un acto).
   - Cuando la exigencia configure un ritualismo inútil ante una postura pública irreversible del órgano.
   - Cuando se reclamen daños y perjuicios derivados de la actividad lícita o ilícita estatal, según la naturaleza de la pretensión.
-- **Fiscalía de Estado / Asesoría General:** [PENDIENTE: verificar denominación exacta, si tiene dictamen obligatorio previo al acto en determinadas materias, y si es parte necesaria en el proceso contencioso.]
+- **Fiscalía de Estado:** parte necesaria en todo proceso contencioso. Su omisión produce nulidad insanable. Ver secciones 4.4 y 4.6. [CONFIRMADO]
 - **Municipios:** el agotamiento ante actos municipales es presupuesto de admisibilidad. Verificar ordenanza de procedimiento del municipio antes de encuadrar la secuencia recursiva.
 
 ```
@@ -166,25 +169,25 @@ Elementos:
 
 ### 3.1 Código / ley de proceso contencioso administrativo
 
-- **Norma:** Ley N° 2415-O (Código Procesal Civil, Comercial y Minería de San Juan), Título V "Proceso Contencioso Administrativo". Sancionada el 11 de agosto de 2022, publicada el 12 de septiembre de 2022. [CONFIRMADO]
+- **Norma:** Ley N° 2415-O (Código Procesal Civil, Comercial y Minería de San Juan), Libro Cuarto, Título V "Proceso Contencioso Administrativo", arts. 727 a 736. Sancionada el 11 de agosto de 2022, publicada el 12 de septiembre de 2022. [CONFIRMADO]
 - **Norma anterior derogada:** Ley N° 988-O (derogada por Ley N° 2415-O). No invocar para hechos posteriores al 12 de septiembre de 2022 sin verificar régimen de derecho transitorio. [CONFIRMADO]
 - **Ley Orgánica del Poder Judicial:** Ley N° 2352-O - consolidó la reorganización del fuero y el diseño de juzgados unipersonales especializados. [CONFIRMADO]
-- **Subsidiariedad:** para lo no previsto en el Título V, aplican las disposiciones generales del mismo Código (Ley N° 2415-O). [CONFIRMADO - verificar si existe remisión expresa al articulado general]
-- **Texto vigente:** Boletín Oficial San Juan, publicación del 12/09/2022. Verificar modificaciones posteriores.
+- **Subsidiariedad:** art. 734 - el proceso se sustancia conforme a las reglas generales del proceso de conocimiento abreviado del mismo Código, en tanto no resulten incompatibles con la naturaleza de la materia CA y las prerrogativas del derecho público provincial. [CONFIRMADO]
+- **Estructura del Título V:** Cap. I (arts. 727-728) - procedencia y competencia; Cap. II (arts. 729-730) - admisibilidad y plazos de caducidad; Cap. III (arts. 731-734) - tramitación; Cap. IV (arts. 735-736) - cautelares y sentencia.
 
 ### 3.2 Plazo de caducidad para accionar judicialmente
 
 **Este es el dato más crítico del perfil. San Juan tiene dos plazos distintos según cómo se agotó la vía.**
 
-- **Plazo - acto expreso:** treinta (30) días corridos desde el día siguiente a la notificación de la resolución definitiva que agota la vía administrativa. [CONFIRMADO - arts. 727 y ss., Ley N° 2415-O]
-- **Plazo - silencio administrativo:** tres (3) meses desde la configuración de la denegatoria tácita (vencimiento de los 20 días hábiles posteriores al Pronto Despacho). [CONFIRMADO - arts. 727 y ss., Ley N° 2415-O]
-- **Naturaleza:** caducidad - no se suspende ni interrumpe salvo norma expresa. El vencimiento produce la caducidad automática de la acción; el acto queda firme y consentido.
-- **Advertencia crítica - días corridos vs. hábiles judiciales:** el plazo de 30 días para acto expreso es en días **corridos** (no hábiles judiciales). Incluye sábados, domingos y feriados. Diferencia relevante respecto de otros regímenes provinciales y del federal. [CONFIRMADO]
-- **¿Declarable de oficio?:** [A VERIFICAR: confirmar en jurisprudencia del Juzgado CA y Cámara Civil San Juan]
-- **Procesos especiales:** [PENDIENTE: verificar si el Título V prevé procesos abreviados con plazo distinto.]
+- **Plazo - acto expreso:** treinta (30) días desde el día siguiente a la notificación personal o por cédula del acto administrativo definitivo que agota la vía. [CONFIRMADO - art. 729 inc. a), Ley N° 2415-O]
+- **Plazo - silencio administrativo:** tres (3) meses desde el vencimiento del término que la Ley N° 1995-A otorga a la Administración para expedirse tras la presentación del Pronto Despacho. [CONFIRMADO - art. 729 inc. b), Ley N° 2415-O]
+- **Naturaleza:** caducidad perentoria - no se suspende ni interrumpe salvo norma expresa. El vencimiento produce la caducidad automática; el acto queda firme y consentido.
+- **Advertencia crítica - días corridos:** el plazo de 30 días del inc. a) no califica como "hábiles". Incluye sábados, domingos y feriados. Diferencia relevante respecto de otros regímenes provinciales y del federal. [CONFIRMADO]
+- **Habilitación de instancia de oficio:** el juez examina de oficio y en forma previa el agotamiento de la vía, la personería y los plazos de caducidad. Si la acción es extemporánea o no se agotó la vía, la rechaza in limine sin sustanciación. [CONFIRMADO - art. 730, Ley N° 2415-O]
+- **Procesos especiales:** no se prevén procesos abreviados con plazo distinto en el Título V. El régimen de caducidad del art. 729 es único. [CONFIRMADO]
 
 ```
-[ALERTA PLAZO FATAL: San Juan - Ley N° 2415-O, arts. 727 y ss. - ACTO EXPRESO: 30 días CORRIDOS desde notificación del acto que agota la vía - SILENCIO: 3 meses desde configuración de la denegatoria tácita - vencimiento: calcular según modalidad]
+[ALERTA PLAZO FATAL: art. 729 inc. a), Ley N° 2415-O San Juan - ACTO EXPRESO: 30 días (corridos) desde notificación del acto definitivo que agota la vía - SILENCIO: 3 meses desde vencimiento del plazo para resolver tras el Pronto Despacho (art. 729 inc. b) - caducidad declarable de oficio in limine (art. 730) - vencimiento: calcular según modalidad]
 ```
 
 **Diferencia crítica con el régimen federal:** el plazo federal es de 180 días hábiles judiciales. El plazo de San Juan para acto expreso es de 30 días corridos. No asumir equivalencia.
@@ -194,35 +197,47 @@ Elementos:
 ### 3.3 Órganos jurisdiccionales
 
 **Primera instancia:**
-- **Tribunal:** Juzgado Contencioso Administrativo de la Primera Circunscripción Judicial, con asiento en la Ciudad de San Juan. Órgano unipersonal especializado. [CONFIRMADO]
-- **Competencia:** actos del Poder Ejecutivo Provincial, entes autárquicos provinciales y municipios. [CONFIRMADO]
+- **Tribunal:** Juzgado Contencioso Administrativo - primera instancia. Competencia en todo el proceso CA (art. 728, Ley N° 2415-O). [CONFIRMADO]
+- **Competencia material (art. 727):** pretensiones fundadas en el derecho administrativo local, emanadas de la actividad de la Administración Pública Provincial, Municipal o de sus entes descentralizados, autárquicos o empresas del Estado, cuando los actos impugnados tengan carácter definitivo y hayan agotado la vía administrativa. Incluye causas de violencia laboral en el sector público. [CONFIRMADO - Ley N° 2352-O]
 - **Gestión:** coordinado por la Oficina de Gestión de Audiencias (OGA) para los Juzgados Especializados en lo Comercial y Contencioso Administrativo. El juez conserva exclusivamente la potestad jurisdiccional; la agenda de audiencias la gestiona la OGA. [CONFIRMADO]
-- **Organización territorial:** circunscripción con asiento en la Ciudad de San Juan. [PENDIENTE: verificar si hay juzgados en circunscripciones del interior o si toda la materia CA se concentra en la capital.]
+- **Organización territorial:** el Juzgado CA tiene asiento en la Primera Circunscripción Judicial (Ciudad de San Juan), que abarca todos los departamentos excepto Jáchal e Iglesia. La Segunda Circunscripción (asiento en Ciudad de San José de Jáchal; departamentos de Jáchal e Iglesia) no cuenta con juzgado CA propio. Los litigantes de esa circunscripción tramitan ante el Juzgado CA de la Primera Circunscripción. [CONFIRMADO - Ley N° 2352-O]
 
 **Segunda instancia (alzada):**
 - **Tribunal:** Cámara de Apelaciones en lo Civil, Comercial y Minería de San Juan - salas distribuidas. No existe cámara exclusiva CA. [CONFIRMADO]
 - **Modalidad:** cuando la Cámara revisa sentencias del Juzgado CA actúa formalmente en materia contencioso administrativa de alzada. [CONFIRMADO]
-- **Advertencia:** las salas de la Cámara pueden tener criterios distintos en cuestiones no unificadas por el STJ. Identificar la sala actuante en cada causa.
+- **Advertencia:** las salas de la Cámara pueden tener criterios distintos en cuestiones no unificadas por la Corte de Justicia. Identificar la sala actuante en cada causa.
 
-**Tribunal superior:**
-- **Tribunal:** Superior Tribunal de Justicia de San Juan.
-- **Acceso:** recurso extraordinario provincial / inconstitucionalidad. [PENDIENTE: precisar denominación exacta del recurso y requisitos de admisibilidad según la Ley N° 2352-O.]
-- **Competencia originaria:** el STJ no tiene competencia originaria en materia CA ordinaria; actúa solo por vía extraordinaria. [CONFIRMADO]
+**Corte de Justicia (máximo tribunal):**
+- **Denominación correcta:** Corte de Justicia de San Juan (no "Superior Tribunal de Justicia"). [CONFIRMADO - Ley N° 2352-O]
+- **Composición:** cinco miembros, con presidencia rotativa anual (1 de marzo al último día de febrero), por orden de antigüedad comenzando por el de mayor edad. [CONFIRMADO]
+- **Sala competente en materia CA:** Sala Segunda - tres vocales. Entiende en los recursos extraordinarios, inconstitucionalidad y control de ejecución en materia contencioso-administrativa (junto con penal, laboral y previsional). [CONFIRMADO - Ley N° 2352-O]
+- **Acceso:** recurso extraordinario de inconstitucionalidad ante la Sala Segunda de la Corte de Justicia. [CONFIRMADO - Ley N° 2352-O - requisitos de admisibilidad específicos: A VERIFICAR en el articulado procesal de la Ley N° 2352-O no aportado]
+- **Competencia originaria:** la Corte de Justicia no tiene competencia originaria en materia CA ordinaria; actúa solo por vía extraordinaria. [CONFIRMADO]
 
 ### 3.4 Pretensiones admisibles
 
-[PENDIENTE: verificar si el Título V de la Ley N° 2415-O enumera las pretensiones admisibles (anulación, restablecimiento del derecho, declarativa, prestacional, cautelar autónoma) o sigue un sistema abierto. Indicar artículo.]
+El art. 727 establece un sistema abierto de pretensiones: corresponde el proceso CA cuando se deduzcan "pretensiones fundadas en el derecho administrativo local" emanadas de la actividad de la Administración. No enumera taxativamente tipos de pretensión. [CONFIRMADO]
+
+Pretensiones que comprende el sistema:
+- Anulación o modificación de actos administrativos definitivos
+- Restablecimiento de derechos subjetivos afectados por la actividad administrativa
+- Pretensiones resarcitorias derivadas de la actividad lícita o ilícita estatal (ver excepción al agotamiento en sección 2.5)
+- Pretensiones contra actos de entes descentralizados, autárquicos y empresas del Estado
+
+**Requisito común a todas las pretensiones impugnatorias:** el acto debe tener carácter definitivo y haber agotado la vía administrativa previa (art. 727). El juez verifica esto de oficio en la habilitación de instancia (art. 730). [CONFIRMADO]
 
 ### 3.5 Medidas cautelares contra el Estado provincial
 
-- **Régimen:** San Juan no tiene ley especial de cautelares contra el Estado equivalente a la Ley N° 26.854 nacional. Aplica el régimen general de la Ley N° 2415-O. La Ley N° 26.854 rige solo contra el Estado nacional; no aplicarla al Estado provincial. [CONFIRMADO]
-- **Requisitos:** verosimilitud del derecho + peligro en la demora + contracautela suficiente + ponderación de que la medida no altere grave e irreversiblemente el interés público ni la prestación de un servicio esencial del Estado provincial. [CONFIRMADO]
-- **Contracautela:** exigida. [CONFIRMADO - modalidad (real / juratoria): A VERIFICAR]
-- **Informe previo del Estado:** [PENDIENTE: verificar si la Ley N° 2415-O o la práctica del Juzgado CA exige informe previo del organismo demandado antes de resolver la cautelar.]
-- **Plazo de vigencia:** [PENDIENTE: verificar si existe límite temporal.]
+- **Régimen:** art. 735, Ley N° 2415-O. San Juan no tiene ley especial de cautelares contra el Estado equivalente a la Ley N° 26.854 nacional. La Ley N° 26.854 rige solo contra el Estado nacional; no aplicarla al Estado provincial. [CONFIRMADO]
+- **Momento:** en cualquier estado del proceso, a petición de parte. No procede de oficio. [CONFIRMADO - art. 735]
+- **Requisitos (concurrentes):** verosimilitud del derecho + peligro en la demora + contracautela suficiente + que la medida no afecte de manera grave el interés público o la continuidad de un servicio público esencial. Los cuatro requisitos deben concurrir de manera simultánea. [CONFIRMADO - art. 735]
+- **Medidas disponibles:** suspensión de los efectos del acto administrativo impugnado u otras medidas cautelares tendientes a resguardar los derechos del actor. [CONFIRMADO - art. 735]
+- **Contracautela:** exigida. Modalidad (real / juratoria): [A VERIFICAR - el art. 735 no especifica modalidad; aplican las reglas generales del proceso de conocimiento abreviado por remisión del art. 734]
+- **Informe previo del Estado:** no previsto expresamente en el art. 735. [A VERIFICAR: confirmar en práctica del Juzgado CA si exige informe previo antes de resolver]
+- **Plazo de vigencia:** no previsto en el art. 735. [A VERIFICAR: aplicar reglas generales del CPCCM por remisión del art. 734]
 
 ```
-[VERIFICAR RÉGIMEN CAUTELAR: San Juan - Ley N° 2415-O régimen general - no asumir equivalencia con Ley N° 26.854 nacional - verificar requisitos ante el Juzgado CA antes de presentar]
+[VERIFICAR RÉGIMEN CAUTELAR: San Juan - art. 735, Ley N° 2415-O - cuatro requisitos simultáneos concurrentes - no asumir equivalencia con Ley N° 26.854 nacional]
 ```
 
 ### 3.6 Amparo provincial
@@ -244,10 +259,11 @@ Elementos:
 ### 4.1 Responsabilidad del Estado provincial
 
 - **Ley propia:** no existe. San Juan no sancionó ley de adhesión ni norma espejo a la Ley N° 26.944 nacional. La Ley N° 26.944 rige solo contra el Estado nacional; no aplicarla al Estado provincial. [CONFIRMADO]
-- **Régimen aplicable - aplicación pretoriana:** el marco sustancial se extrae directamente de los arts. 8 y 43 de la Constitución de San Juan (responsabilidad directa y objetiva por la actividad lícita e ilícita de sus agentes). Los tribunales locales (STJ San Juan) aplican los principios clásicos del derecho administrativo. [CONFIRMADO]
-- **Factores de atribución y requisitos:** falta de servicio como factor de atribución objetivo; daño cierto y mensurable; relación de causalidad adecuada entre el accionar u omisión estatal y el perjuicio invocado. [CONFIRMADO]
-- **Régimen de ejecución de sentencias:** las sentencias que imponen al Estado el pago de sumas líquidas tienen efectos declarativos en su faz de ejecución directa. El Poder Ejecutivo incorpora el crédito en el proyecto de Ley de Presupuesto General del ejercicio siguiente al que el fallo quedó firme. Excepción: si vence ese ejercicio sin que se hayan previsto los fondos o efectuado el pago, cesa la protección y procede la ejecución. [CONFIRMADO]
-- **Prescripción:** [A VERIFICAR: verificar plazo en jurisprudencia del STJ San Juan. Tener presente el potencial conflicto con el art. 2561 CCCN si el tribunal aplica el estándar civil ante ausencia de ley propia provincial.]
+- **Régimen aplicable - aplicación pretoriana:** el marco sustancial se extrae directamente de los arts. 8 y 43 de la Constitución de San Juan. Los tribunales aplican los principios clásicos del derecho administrativo. [CONFIRMADO]
+- **Factores de atribución y requisitos:** falta de servicio como factor de atribución objetivo; daño cierto y mensurable; relación de causalidad adecuada. [CONFIRMADO]
+- **Régimen de ejecución de sentencias (art. 736):** las sentencias que resuelven sobre la validez, nulidad o modificación del acto determinan las obligaciones a cargo de la Administración. Las sentencias condenatorias al pago de sumas de dinero tienen carácter declarativo y se ejecutan mediante el sistema de consolidación presupuestaria previsto en las leyes de la materia. [CONFIRMADO - art. 736, Ley N° 2415-O]
+- **Excepción al carácter declarativo:** si vence el ejercicio presupuestario siguiente sin que se hayan previsto los fondos o efectuado el pago, cesa la protección y procede la ejecución. [CONFIRMADO]
+- **Prescripción:** [A VERIFICAR: jurisprudencia reciente del STJ San Juan. Sin ley propia, el tribunal puede aplicar el estándar del art. 2561 CCCN.]
 
 ```
 [VERIFICAR VIGENCIA: responsabilidad del Estado San Juan - sin ley propia - aplicar arts. 8 y 43 CP San Juan + principios del derecho administrativo + jurisprudencia STJ San Juan - no aplicar Ley N° 26.944 ni CCCN sin verificar criterio del tribunal]
@@ -289,10 +305,11 @@ Elementos:
 ### 4.4 Organismo de control externo
 
 - **Tribunal de Cuentas:** regulado por el art. 253 de la Constitución Provincial y la Ley N° 260-E. Dicta fallos definitivos de cuenta y de responsabilidad administrativa sobre funcionarios públicos. Su resolución agota la vía administrativa: no se recurre ante el Poder Ejecutivo, sino que se demanda directamente ante el Juzgado Contencioso Administrativo. [CONFIRMADO]
-- **Fiscalía de Estado / Asesoría General:** Fiscalía de Estado de la Provincia de San Juan. Base normativa: art. 263 Constitución Provincial + Ley N° 319-E (Ley Orgánica de Fiscalía de Estado). [CONFIRMADO]
+- **Fiscalía de Estado / Asesoría General:** Fiscalía de Estado de la Provincia de San Juan. Base normativa: art. 263 CP + Ley N° 319-E + art. 733, Ley N° 2415-O. [CONFIRMADO]
   - Misión: defensa del patrimonio provincial, control de legalidad de los actos administrativos y custodia de los bienes fiscales (dominio público y privado).
-  - Parte necesaria: por imperativo del art. 263 CP, es parte legítima y necesaria en todos los juicios contencioso administrativos, amparos en que se involucren actos estatales, y en toda controversia judicial o extrajudicial en que se afecten directa o indirectamente los intereses patrimoniales o económicos del Estado Provincial.
-  - **Sanción por omisión:** la falta de citación o intervención de la Fiscalía de Estado acarrea la nulidad insanable de las actuaciones. [CONFIRMADO]
+  - Parte necesaria (art. 733, Ley N° 2415-O): en todos los procesos CA donde se controviertan actos emanados del Poder Ejecutivo, entes autárquicos o centralizados. Debe notificársele formalmente el traslado en su domicilio institucional.
+  - **Momento procesal (art. 732):** recibido el expediente administrativo, se da traslado a Fiscalía de Estado por 15 días para comparecer, contestar y oponer excepciones.
+  - **Sanción por omisión (art. 733):** nulidad insanable de lo actuado. [CONFIRMADO]
 - **Control sobre municipios:** [PENDIENTE: verificar si el Tribunal de Cuentas provincial tiene competencia sobre cuentas municipales.]
 
 ### 4.5 Defensor del Pueblo provincial
@@ -305,11 +322,11 @@ Previsto en el art. 134 de la Constitución de San Juan y normado por la Ley N°
 
 | Instancia | Representante del Estado | Normativa |
 |-----------|--------------------------|-----------|
-| Juzgado CA (primera instancia) | Fiscalía de Estado de la Provincia de San Juan (parte necesaria) | Art. 263 CP San Juan; Ley N° 319-E |
-| Cámara Civil CA (alzada) | Fiscalía de Estado (parte necesaria) | Art. 263 CP San Juan; Ley N° 319-E |
-| STJ (extraordinario) | Fiscalía de Estado (parte necesaria) | Art. 263 CP San Juan; Ley N° 319-E |
-| Notificaciones físicas | Av. Libertador Gral. San Martín 750 (Oeste), Centro Cívico, 5° Piso, Núcleo 1, Ciudad de San Juan | Ley N° 319-E |
-| Notificaciones electrónicas | Casillero virtual institucional "Fiscalía de Estado de la Provincia" en el sistema de gestión judicial del Poder Judicial de San Juan | Sistema e-judicial San Juan |
+| Juzgado CA - traslado demanda | Fiscalía de Estado (parte necesaria) - plazo 15 días para comparecer, contestar y oponer excepciones | Art. 732-733, Ley N° 2415-O; art. 263 CP; Ley N° 319-E |
+| Cámara Civil CA (alzada) | Fiscalía de Estado (parte necesaria) | Art. 263 CP; Ley N° 319-E |
+| Corte de Justicia - Sala Segunda (extraordinario) | Fiscalía de Estado (parte necesaria) | Art. 263 CP; Ley N° 319-E |
+| Notificaciones físicas | Av. Libertador Gral. San Martín 750 (Oeste), Centro Cívico, 5° Piso, Núcleo 1, Ciudad de San Juan | Art. 733, Ley N° 2415-O; Ley N° 319-E |
+| Notificaciones electrónicas | Casillero virtual institucional "Fiscalía de Estado de la Provincia" - sistema e-judicial San Juan | Sistema e-judicial San Juan |
 
 **Sanción por omisión de citación:** la falta de citación o intervención de la Fiscalía de Estado acarrea la nulidad insanable de las actuaciones. Citar antes de la primera presentación en todo proceso donde se afecten intereses del Estado provincial. [CONFIRMADO]
 
@@ -328,7 +345,7 @@ Previsto en el art. 134 de la Constitución de San Juan y normado por la Ley N°
 Los plazos para impugnar actos administrativos provinciales son breves y fatales. No asumir equivalencia con el régimen federal.
 
 ```
-[ALERTA PLAZO FATAL: San Juan - Ley N° 2415-O, arts. 727 y ss. - ACTO EXPRESO: 30 días CORRIDOS desde notificación - SILENCIO: 3 meses desde configuración de denegatoria tácita - vencimiento: calcular según modalidad]
+[ALERTA PLAZO FATAL: art. 729 inc. a) Ley N° 2415-O San Juan - ACTO EXPRESO: 30 días (corridos) desde notificación del acto definitivo - art. 729 inc. b) - SILENCIO: 3 meses desde vencimiento del plazo para resolver tras el Pronto Despacho - caducidad verificada de oficio in limine (art. 730) - vencimiento: calcular según modalidad]
 ```
 
 ### Matriz de vigencia por norma
@@ -339,9 +356,16 @@ Los plazos para impugnar actos administrativos provinciales son breves y fatales
 | Ley N° 2415-O, Título V (arts. 727 y ss.) | Proceso contencioso administrativo | CONFIRMADO | Mayo 2025 | BO San Juan 12/09/2022 |
 | Ley N° 2352-O | Ley Orgánica del Poder Judicial - fuero CA | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
 | Ley N° 379-E (ex Ley 6006) | Intereses difusos / derechos colectivos | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
-| Ley N° 319-E | Fiscalía de Estado | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
-| Ley N° 560-E | Empleo público provincial | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
-| Ley N° 2000-A + Dec. 1148-MHF-2020 | Contrataciones del Estado provincial | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 319-E + art. 263 CP | Fiscalía de Estado | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 560-E | Empleo público - estatuto general | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 64-H | Empleo público - estatuto docente | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 2529-A | Empleo público - carrera médico-asistencial | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 487-R | Empleo público - personal policial | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 1222-R | Empleo público - servicio penitenciario | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 2000-A + Dec. 1148-MHF-2020 | Contrataciones del Estado (bienes y servicios) | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 118-A + Dec. 1228-P-1979 | Obra pública provincial | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 260-E + art. 253 CP | Tribunal de Cuentas | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
+| Ley N° 100-E + art. 134 CP | Defensor del Pueblo | CONFIRMADO | Mayo 2025 | Digesto Jurídico de San Juan |
 | Responsabilidad del Estado | Sin ley propia - arts. 8 y 43 CP San Juan | CONFIRMADO | Mayo 2025 | Jurisprudencia STJ San Juan |
 | Ley N° 988-O | Código CA - DEROGADO por Ley N° 2415-O | DEROGADO | Mayo 2025 | - |
 
@@ -350,7 +374,7 @@ Los plazos para impugnar actos administrativos provinciales son breves y fatales
 - **Montos de contratación pública:** se actualizan por decreto o resolución - verificar antes de encuadrar el procedimiento de selección.
 - **Escala salarial del empleo público provincial:** se modifica por paritarias - no asumir montos sin verificar.
 - **Asuetos administrativos provinciales:** afectan el cómputo de plazos en sede administrativa - verificar decreto de asueto vigente al momento del acto.
-- **Feria judicial:** no afecta el plazo de caducidad de 30 días para acto expreso (son días corridos, no hábiles judiciales). Sí puede afectar el cómputo de los 3 meses por silencio si el tribunal los interpreta en días corridos. Verificar criterio del Juzgado CA.
+- **Feria judicial:** todo el mes de enero + receso de invierno de 15 días corridos fijado por la Corte de Justicia. Durante la feria solo se habilitan cautelares, amparos, hábeas corpus, alimentos, denuncias penales y violencia familiar (Ley N° 2352-O). El plazo de caducidad de 30 días corridos para acto expreso (art. 729 inc. a) no se suspende durante la feria salvo habilitación expresa. Verificar si el cómputo cae en período de feria antes de calcular el vencimiento.
 
 ```
 [VERIFICAR VIGENCIA: norma provincial San Juan - consultar Digesto Jurídico de San Juan y Boletín Oficial antes de aplicar]
@@ -389,7 +413,7 @@ Las reglas generales del CLAUDE.md argentino y del administrativo-CLAUDE.md naci
 
 **Plazos provinciales:** no transpolar plazos del régimen federal. En San Juan, el plazo de caducidad difiere según cómo se agotó la vía. Usar:
 ```
-[ALERTA PLAZO FATAL: Ley N° 2415-O, arts. 727 y ss. San Juan - ACTO EXPRESO: 30 días CORRIDOS - SILENCIO: 3 meses - desde el hito que corresponda - vencimiento: calcular según modalidad]
+[ALERTA PLAZO FATAL: art. 729 Ley N° 2415-O San Juan - ACTO EXPRESO: 30 días corridos (inc. a) - SILENCIO: 3 meses (inc. b) - caducidad de oficio in limine (art. 730) - vencimiento: calcular según modalidad]
 ```
 
 **Dictámenes de Fiscalía de Estado:** no asumir su contenido sin material aportado. Usar:
@@ -409,7 +433,7 @@ Aplicar Ley N° 1995-A. Elementos según sección 2.3.
 
 Preguntas de diagnóstico:
 1. ¿Qué acto se impugna? ¿Es definitivo o de mero trámite? ¿Es del Estado provincial, de un municipio o de un organismo federal?
-2. ¿El acto fue notificado? ¿En qué fecha? (inicio del cómputo del plazo de caducidad - 30 días hábiles judiciales)
+2. ¿El acto fue notificado? ¿En qué fecha? (inicio del cómputo del plazo de caducidad - 30 días corridos para acto expreso)
 3. ¿Qué elementos del acto se cuestionan?
 4. ¿Hay expediente administrativo que lo respalda? ¿El abogado lo tiene o hay que pedirlo por vista?
 5. ¿Se recurrió en sede administrativa? ¿Qué recursos se interpusieron y en qué plazo?
@@ -432,16 +456,16 @@ Aplicar el esquema de la sección 2.4. Verificar siempre:
 Antes de analizar cualquier acción judicial:
 1. Verificar si la vía está agotada (sección 2.5)
 2. Si no lo está, determinar si aplica alguna excepción (vía de hecho, ritualismo inútil, pretensión resarcitoria)
-3. Verificar si la Fiscalía de Estado requiere intervención previa
-4. Alertar sobre el plazo de caducidad: 30 días hábiles judiciales desde la notificación del acto que agota la vía
+3. El juez verifica el agotamiento de oficio en la habilitación de instancia (art. 730). Si detecta caducidad o falta de agotamiento, rechaza in limine.
+4. Alertar sobre el plazo de caducidad: acto expreso = 30 días (art. 729 inc. a); silencio = 3 meses (art. 729 inc. b)
 
 ### Responsabilidad del Estado provincial
 
-San Juan no tiene ley propia de responsabilidad. Aplicar arts. 8 y 43 CP San Juan + principios del derecho administrativo + jurisprudencia del STJ San Juan. Alertas:
-- No aplicar la Ley N° 26.944 nacional ni el CCCN como régimen sustantivo sin verificar criterio del STJ.
+San Juan no tiene ley propia de responsabilidad. Aplicar arts. 8 y 43 CP San Juan + principios del derecho administrativo + jurisprudencia de la Corte de Justicia de San Juan. Alertas:
+- No aplicar la Ley N° 26.944 nacional ni el CCCN como régimen sustantivo sin verificar criterio de la Corte.
 - Falta de servicio como factor de atribución objetivo; daño cierto; causalidad adecuada.
 - Las sentencias de condena dineraria tienen carácter declarativo. El Estado incorpora el crédito en el presupuesto del ejercicio siguiente. Excepción: si vence ese ejercicio sin pago ni previsión, procede la ejecución.
-- Prescripción: sin ley propia, el STJ puede aplicar el estándar del art. 2561 CCCN. Verificar jurisprudencia reciente antes de analizar la viabilidad de la acción.
+- Prescripción: sin ley propia, la Corte puede aplicar el estándar del art. 2561 CCCN. Verificar jurisprudencia reciente antes de analizar la viabilidad de la acción.
 
 ### Empleo público provincial
 
@@ -473,13 +497,14 @@ El plazo para demandar es un plazo de caducidad, no de prescripción:
 - Vencido el plazo, la acción caduca automáticamente; el acto queda firme y consentido
 - La caducidad puede declararse de oficio
 
-**Plazo provincial:** dos regímenes según modalidad de agotamiento - [CONFIRMADO - arts. 727 y ss., Ley N° 2415-O]
-- Acto expreso: treinta (30) días **corridos** desde notificación del acto que agotó la vía.
-- Silencio: tres (3) meses desde la configuración de la denegatoria tácita.
+**Plazo provincial:** dos regímenes según modalidad de agotamiento - [CONFIRMADO - art. 729, Ley N° 2415-O]
+- Acto expreso: treinta (30) días desde notificación personal o por cédula del acto definitivo (art. 729 inc. a).
+- Silencio: tres (3) meses desde el vencimiento del plazo para resolver tras el Pronto Despacho (art. 729 inc. b).
+- **El juez declara la caducidad de oficio in limine (art. 730)** - no espera oposición de parte.
 
 Antes de analizar cualquier otra cuestión en una consulta sobre acción contenciosa provincial, emitir:
 ```
-[ALERTA PLAZO FATAL: San Juan - Ley N° 2415-O, arts. 727 y ss. - ACTO EXPRESO: 30 días CORRIDOS - SILENCIO: 3 meses - verificar modalidad de agotamiento - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 729 Ley N° 2415-O San Juan - ACTO EXPRESO: 30 días corridos desde notificación (inc. a) - SILENCIO: 3 meses desde vencimiento del plazo para resolver tras Pronto Despacho (inc. b) - rechazo in limine de oficio si caduca (art. 730) - vencimiento: calcular]
 ```
 
 **Diferencia con el régimen federal:** el plazo federal es de 180 días hábiles judiciales. El plazo de San Juan para acto expreso es de 30 días corridos (incluye fines de semana y feriados). No asumir equivalencia.
@@ -490,7 +515,7 @@ Antes de analizar cualquier otra cuestión en una consulta sobre acción contenc
 
 - Identificar si el acto es del Estado provincial, de un municipio o de un organismo federal antes de aplicar este perfil o el nacional.
 - El proceso CA está integrado en el Título V (arts. 727 y ss.) de la Ley N° 2415-O (vigente desde 12/09/2022). No invocar la Ley N° 988-O para hechos posteriores a esa fecha.
-- Primera instancia: Juzgado CA unipersonal + OGA. Alzada: Cámara Civil salas distribuidas. STJ solo por vía extraordinaria.
+- Primera instancia: Juzgado CA unipersonal + OGA. Alzada: Cámara Civil salas distribuidas. Recurso extraordinario: Corte de Justicia, Sala Segunda.
 - En actos mixtos: aplicar cada régimen al acto correspondiente por separado.
 - Verificar agotamiento de la vía administrativa provincial antes de analizar la acción judicial.
 - Plazos de recursos en sede administrativa son hábiles administrativos, no judiciales. Reconsideración: 10 días. Jerárquico: 10 días desde denegatoria.
@@ -498,10 +523,10 @@ Antes de analizar cualquier otra cuestión en una consulta sobre acción contenc
 - Plazo de caducidad: ACTO EXPRESO = 30 días corridos. SILENCIO = 3 meses. Verificar modalidad antes de calcular.
 - Fiscalía de Estado es parte necesaria en todo proceso. Su omisión produce nulidad insanable. Citar antes de la primera presentación.
 - En responsabilidad del Estado: sin ley propia; aplicar arts. 8 y 43 CP San Juan + principios del derecho administrativo. Sentencias declarativas con excepción por vencimiento de ejercicio sin pago.
-- Todo escrito provincial cierra con "Estado del escrito" estándar más: fuero y régimen aplicado (Juzgado CA San Juan + Ley N° 2415-O, arts. 727 y ss.), estado del agotamiento de la vía, **plazo de caducidad provincial (30 días corridos acto expreso / 3 meses silencio - verificado / pendiente / vencido)**, intervención de Fiscalía de Estado (sí - parte necesaria / citada / a citar - omisión: nulidad insanable), sala de Cámara si está en alzada, próximo plazo procesal si lo hay, régimen de responsabilidad (arts. 8 y 43 CP San Juan + jurisprudencia STJ / CCCN solo si es contratista privado), régimen de ejecución (declarativa - presupuesto ejercicio siguiente / excepción por vencimiento sin pago).
+- Todo escrito provincial cierra con "Estado del escrito" estándar más: fuero y régimen aplicado (Juzgado CA San Juan + Ley N° 2415-O, arts. 727 y ss.), estado del agotamiento de la vía, **plazo de caducidad provincial (30 días corridos acto expreso / 3 meses silencio - verificado / pendiente / vencido)**, intervención de Fiscalía de Estado (sí - parte necesaria / citada / a citar - omisión: nulidad insanable), sala de Cámara si está en alzada, próximo plazo procesal si lo hay, régimen de responsabilidad (arts. 8 y 43 CP San Juan + jurisprudencia Corte de Justicia / CCCN solo si es contratista privado), régimen de ejecución (declarativa - presupuesto ejercicio siguiente / excepción por vencimiento sin pago).
 
 ---
 
 *Última actualización: Mayo 2025*
-*Normativa base: Ley N° 1995-A (ex Ley 135-A / 3756, consolidada por Ley N° 2504-E) - procedimiento administrativo; Ley N° 2415-O, Título V arts. 727 y ss. - proceso CA (vigente desde 12/09/2022, deroga Ley N° 988-O); Ley N° 2352-O - Ley Orgánica del Poder Judicial; Ley N° 319-E + art. 263 CP - Fiscalía de Estado; Ley N° 379-E (ex Ley 6006) - intereses difusos; Ley N° 560-E - empleo público; Ley N° 2000-A + Decreto 1148-MHF-2020 - contrataciones; Constitución Provincial arts. 8, 40, 43 y 263.*
+*Normativa base: Ley N° 1995-A (ex Ley 135-A / 3756, consolidada por Ley N° 2504-E) - procedimiento administrativo; Ley N° 2415-O, Título V arts. 727 y ss. - proceso CA (vigente desde 12/09/2022, deroga Ley N° 988-O); Ley N° 2352-O - Ley Orgánica del Poder Judicial; Ley N° 319-E + art. 263 CP - Fiscalía de Estado; Ley N° 379-E (ex Ley 6006) - intereses difusos; Ley N° 560-E - empleo público general; Ley N° 64-H - estatuto docente; Ley N° 2529-A - carrera médico-asistencial; Ley N° 487-R - personal policial; Ley N° 1222-R - servicio penitenciario; Ley N° 2000-A + Decreto 1148-MHF-2020 - contrataciones bienes y servicios; Ley N° 118-A + Decreto 1228-P-1979 - obra pública; Ley N° 260-E + art. 253 CP - Tribunal de Cuentas; Ley N° 100-E + art. 134 CP - Defensor del Pueblo; Constitución Provincial arts. 8, 40, 43, 46, 134, 253 y 263.*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
